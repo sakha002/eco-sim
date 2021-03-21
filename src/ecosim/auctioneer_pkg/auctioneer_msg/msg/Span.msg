@@ -1,0 +1,3 @@
+builtin_interfaces/Time start_time
+builtin_interfaces/Time end_time
+int32 span_id 1

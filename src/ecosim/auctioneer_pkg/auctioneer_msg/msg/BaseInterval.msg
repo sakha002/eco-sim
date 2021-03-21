@@ -1,0 +1,3 @@
+builtin_interfaces/Time interval_end
+builtin_interfaces/Duration interval_duration
+int32 interval_id 1

@@ -1,0 +1,38 @@
+message GenInstantData{
+    string name = 1;
+    float maxMW = 2;
+    float minMW = 3;
+    float max_ramp = 4;
+    flaot marginal_cost = 5;
+    float fixed_cost =  6;
+    float unit_price = 7;
+
+}
+
+message GenInstantAck{
+    bool model_created =1;
+}
+
+
+message InstantiateResponse {
+	GenInstantAck response = 1;
+}
+
+message InstantiateRequest {
+	GenInstantData request = 1;
+}
+
+
+message AuctionRequestData{
+    float price =1
+    floar 
+}
+
+service TestGenService {
+    rpc InstantiateModel( InstantiateRequest) returns (InstantiateResponse) {};
+	
+	rpc RunUpdateModel(OptopyRequest) returns (OptopyResponse) {};
+
+	rpc OptimizeWithTradesUnary(OptopyRequest) returns (OptopyResponse) {};
+
+}
